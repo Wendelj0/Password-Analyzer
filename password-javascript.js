@@ -3,13 +3,13 @@ const strengthFill = document.getElementById("strengthFill");
 const strengthLabel = document.getElementById("strengthLabel");
 const toggleBtn = document.getElementById("toggleTheme");
 
-// Theme Logic
-const currentTheme = localStorage.getItem("theme");
-if (currentTheme === "dark") {
+// Theme Initialization
+if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
   toggleBtn.textContent = "☀️";
 }
 
+// Toggle Event
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   const isDark = document.body.classList.contains("dark");
@@ -18,7 +18,7 @@ toggleBtn.addEventListener("click", () => {
   toggleBtn.textContent = isDark ? "☀️" : "🌙";
 });
 
-// Password Logic
+// Strength Checker
 passwordInput.addEventListener("input", () => {
   const val = passwordInput.value;
   let score = 0;
@@ -32,7 +32,6 @@ passwordInput.addEventListener("input", () => {
   const pct = (score / 5) * 100;
   strengthFill.style.width = `${pct}%`;
   
-  // Reset classes
   strengthFill.className = "strength-fill";
 
   if (val.length === 0) {
