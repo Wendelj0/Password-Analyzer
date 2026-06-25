@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Vault</title>
+  <link rel="stylesheet" href="./vault.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="logo">🌐 CyberGuard</div>
+    <nav class="nav-links">
+      <a href="index.html">🏠 Generator</a>
+      <a href="vault.html" class="active">🔐 Cyber Vault</a>
+      <a href="password-analyzer.html">📊 Analyzer Dashboard</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>🔐 Cyber Vault</h1>
+    <p class="subtitle">Secure Password Storage</p>
+
+    <div class="add-section">
+      <input id="site" placeholder="Website" />
+      <input id="username" placeholder="Username" />
+      <input id="vaultPassword" type="password" placeholder="Password" />
+      <button id="saveBtn">Save</button>
+    </div>
+
+    <input id="search" placeholder="Search passwords...">
+
+    <div id="vaultList"></div>
+  </div>
+
+  <script src="./vault.js"></script>
+</body>
+</html>
